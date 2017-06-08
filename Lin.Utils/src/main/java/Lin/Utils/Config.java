@@ -30,17 +30,9 @@ public class Config {
                     break;
                 }
             }
-        }catch (Exception ex){ };
+        }catch (Exception ex){
+            System.out.println(ex.toString());
+        };
         return value;
-    }
-
-    /**
-     * 根据配置KEY，获取指定文件【程序默认config.properties】获取相应的值
-     * @param key
-     * @return
-     */
-    public static String getPropertiesByKey(String key) {
-        String fileName = "config.properties";
-        return getPropertiesByKey(fileName, key);
     }
 }
